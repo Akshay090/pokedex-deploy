@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    }
+
+body {
+    background: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+    display:flex;
+    flex-direction:column;
+}
+
+
+.github-fork-ribbon:before {
+    background-color: #333;
+}
+
+.no-display {
+    display: none;
+}
+
+.center {
+    margin: auto;
+    padding: 10px 50px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 30px;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #262626;
+}
+
+.content {
+    margin-top: 2em;
+}
+
+.image-box {
+    max-width: 300px;
+    display: inline-block;
+    padding: 6px;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+#image-picked {
+    max-width: 300px;
+
+}
+
+.analyze {
+    margin-top: 2em;
+}
+
+.upload-label {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.result-label {
+    margin-top: 0.5em;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    ;
+}
+
+button.choose-file-button {
+    width: 200px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px #7052CB;
+    font-size: 13px;
+    color: #7052CB;
+}
+
+button.analyze-button {
+    width: 200px;
+    height: 40px;
+    border: solid 1px #7052CB;
+    border-radius: 2px;
+    background-color: #7052CB;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.site-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    margin-top: auto;
+}
+
+.heart{
+    font-size: medium;
+}
+a {
+    text-decoration: none;
+}
