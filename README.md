@@ -8,6 +8,6 @@ You can test your changes locally by installing Docker and using the following c
 docker build -t poke-image . && docker run --rm -it -p 5000:5000 poke-image
 ```
 
-This is deployed on azure app service, with cd from master branch
+This is deployed on azure app service, with cd from master branch using azure pipelines
 
 This repo is based on [fastai deployment template](https://github.com/render-examples/fastai-v3)
