@@ -1,5 +1,17 @@
 var el = x => document.getElementById(x);
 
+console.log(`
+    )      (                 
+ ( /(      )\ )              
+ )\())(   (()/(  (   (   (   
+((_)\ )\   /(_)) )\  )\  )\  
+ _((_|(_) (_))_ ((_)((_)((_) 
+| || |(_)  |   \| __\ \ / /  
+| __ || |  | |) | _| \ V /   
+|_||_||_|  |___/|___| \_/    
+                             
+`);
+
 function showPicker() {
   el("file-input").click();
 }
@@ -17,11 +29,7 @@ function showPicked(input) {
 function analyze() {
   var fileInput = el("file-input");
   var uploadFiles = fileInput.files;
-//   if (uploadFiles.length !== 1) alert("Please select a file to analyze!");
-//   var isDefault = fileInput.dataset.default;
-
   el("analyze-button").innerHTML = "Analyzing...";
-
   var xhr = new XMLHttpRequest();
   var loc = window.location;
   xhr.open("POST", `${loc.protocol}//${loc.hostname}:${loc.port}/analyze`,
@@ -33,12 +41,11 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `You choosed ${response["result"]}`;
-
     }
     el("analyze-button").innerHTML = "Analyze";
   };
 
-   var defaultImg = el("image-picked").src
+    var defaultImg = el("image-picked").src
     var defaultFile = dataURLtoFile(defaultImg, 'pikachu.png')
     var fileData = new FormData();
     fileData.append("file", defaultFile);
@@ -48,17 +55,14 @@ function analyze() {
 }
 
 function dataURLtoFile(dataurl, filename) {
-
     var arr = dataurl.split(','),
-        mime = arr[0].match(/:(.*?);/)[1],
-        bstr = atob(arr[1]),
-        n = bstr.length,
-        u8arr = new Uint8Array(n);
-
+    mime = arr[0].match(/:(.*?);/)[1],
+    bstr = atob(arr[1]),
+    n = bstr.length,
+    u8arr = new Uint8Array(n);
     while(n--){
         u8arr[n] = bstr.charCodeAt(n);
     }
-
     return new File([u8arr], filename, {type:mime});
 }
 
