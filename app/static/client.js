@@ -50,7 +50,6 @@ function analyze() {
     var defaultFile = dataURLtoFile(defaultImg, 'pikachu.png')
     var fileData = new FormData();
     fileData.append("file", defaultFile);
-    // console.log(defaultFile)
     xhr.send(fileData);
 
 }
