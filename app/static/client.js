@@ -12,7 +12,7 @@ console.log(`
                              
 `);
 console.log("Hey there! Interested in the code behind this site you can have a look at : " +
-            "https://github.com/akshay090/pokedex-deploy ");
+            "https://github.com/akshay090/pokedex-deploy");
 function showPicker() {
   el("file-input").click();
 }
