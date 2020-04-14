@@ -19,7 +19,7 @@ variables:
   imageRepository: 'poke-image'
   containerRegistry: 'pokedexcontainerregistry.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: 'v:2'
+  tag: 'v2'
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
